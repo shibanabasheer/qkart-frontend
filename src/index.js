@@ -5,9 +5,8 @@ import App from "./App";
 import { SnackbarProvider } from "notistack";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "@mui/system";
-// import theme from "./theme";
+import theme from "./theme";
 
-// TODO: CRIO_TASK_MODULE_REGISTER - Add Target container ID (refer public/index.html)
 ReactDOM.render(
   <React.StrictMode>
         <SnackbarProvider
@@ -19,7 +18,9 @@ ReactDOM.render(
           preventDuplicate
         >
           <Router>
-            <App />
+            <ThemeProvider theme={theme}>
+              <App />
+            </ThemeProvider>
           </Router>
         </SnackbarProvider>
   </React.StrictMode>,
