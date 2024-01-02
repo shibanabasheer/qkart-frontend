@@ -84,7 +84,7 @@ const Login = () => {
         }
         else{
           enqueueSnackbar(
-            "something went wrong", {variant: "warning"}
+            "something went wrong. Check the backend.", {variant: "warning"}
           );
         }
       }
@@ -206,7 +206,7 @@ const Login = () => {
             <CircularProgress color="success" />
           </Box>
           )}
-          <Button varient="contained" onClick={login}>
+          <Button variant="contained" onClick={login}>
             LOGIN TO QKART
           </Button>
           {/* <p className="secondary-action">

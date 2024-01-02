@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import "./Register.css";
 import MuiAlert from "@mui/material/Alert";
-import {useHistory, link} from "react-router-dom";
+import {useHistory, Link} from "react-router-dom";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -78,9 +78,9 @@ const Register = () => {
         historyRegister.push("/login");
       }catch(error){
         setRegistrationDone(false)
-        const {data} = error.response;
-        if(error.response.status === 400){
-          enqueueSnackbar(data.message, {variant: "error"})
+        // const {data} = error.response;
+        if(error.response && error.response.status === 400){
+          enqueueSnackbar(error.response.data.message, {variant: "error"})
         }else{
           enqueueSnackbar("Something went wrong. Check that the backend is running, reachable and returns valid JSON",{variant: "warning"})
         }
@@ -193,14 +193,19 @@ const Register = () => {
             value={getConfirmPasswordValue}
             onChange={handleConfirmPasswordChange}
           />
-           <Button className="button" variant="contained" onClick={() => register({ username: getUserNameValue, password: getPasswordValue, confirmPassword: getConfirmPasswordValue })}>
-            Register Now
+           <Button className="button" variant="contained" 
+           onClick={() => register({ username: getUserNameValue, password: getPasswordValue, confirmPassword: getConfirmPasswordValue })}>
+           {getRegistrationDone ? (
+           <CircularProgress size={24} style={{ color: "white" }} />
+           ) : (
+            "Register Now"
+            )}
            </Button>
           <p className="secondary-action">
             Already have an account?{" "}
-             <a className="link" href="#">
+            <Link to="/login" className="link">
               Login here
-             </a>
+              </Link>
           </p>
         </Stack>
       </Box>
