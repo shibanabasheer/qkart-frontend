@@ -4,6 +4,7 @@ import ipConfig from "./ipConfig.json";
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Products from "./components/Products";
+import Checkout from "./components/Checkout";
 import { Suspense } from "react";
 
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Products />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
         </Suspense>
         
