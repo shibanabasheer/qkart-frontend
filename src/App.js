@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Products from "./components/Products";
 import Checkout from "./components/Checkout";
+import Thanks from "./components/Thanks";
 import { Suspense } from "react";
 
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/checkout">
           <Checkout />
+        </Route>
+        <Route path="/thanks">
+          <Thanks />
         </Route>
         </Suspense>
         
