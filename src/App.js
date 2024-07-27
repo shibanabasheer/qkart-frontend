@@ -10,7 +10,7 @@ import { Suspense } from "react";
 
 
 export const config = {
-   endpoint: `http://${ipConfig.workspaceIp}:8082/api/v1`,
+   endpoint: `https://qkart-frontend-v2-6o9c.onrender.com/api/v1`,
 };
 
 function App() {
