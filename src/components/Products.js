@@ -481,8 +481,7 @@ const Products = () => {
         <Grid item className="product-grid">
         <Box className="hero">
           <p className="hero-heading">
-            India’s <span className="hero-highlight">FASTEST DELIVERY</span>{" "}
-            to your door step
+             <span className="hero-highlight">FASTEST DELIVERY</span>
           </p>
         </Box> 
         </Grid>

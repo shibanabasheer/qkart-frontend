@@ -5,14 +5,15 @@
 }
 
 .hero {
-  background-image: url("../assets/hero_image.png");
+  background-image: url("../assets/64607c22a2f8c1b6d6f7a311_hero\ 1\ \(2\)\ \(2\).png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  /* padding-right: 2rem; */
 }
 
 .product-grid {
@@ -20,17 +21,18 @@
 }
 
 .hero-heading {
-  color: #fff;
+  color: rgb(49, 160, 86);
   font-size: 1.5rem;
-  width: 80%;
-  position: relative;
-  left: 1rem;
+  text-align: right;
+  /* width: 80%; */
+  /* position: relative; */
+  /* left: 2rem; */
 }
 
 .hero-highlight {
   color: #212121;
   font-weight: 700;
-  background: #ffb825;
+  background: #e2a732;
   border-radius: 5px;
   padding: 0.2rem;
 }
@@ -59,9 +61,9 @@
     padding-right: 8rem;
   }
   .hero-heading {
-    position: static;
+    /* position: static; */
     font-size: 3rem;
-    width: 50%;
+    width: auto;
   }
   .search-mobile {
     display: none !important;
